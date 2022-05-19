@@ -1,0 +1,56 @@
+#include<conio.h> #include<iostream.h> #include<string.h> #include<conio.h> #include<iostream.h> #include<string.h> class college
+{
+int cid,year; // cid=college id , year=published year
+char name[10],un[10]; // name=college name , un=university public:
+void accept()
+{
+cout<<"\nEnter college id: "; cin>>cid;
+cout<<"\nEnter college name: "; cin>>name;
+cout<<"\nEnter college established year: "; cin>>year;
+cout<<"\nEnter college university: "; cin>>un;
+}
+void accept(char p[])
+{
+
+
+if(strcmp(p,un)==0) //checking university name matches or not
+{
+cout<<"your given university details are: "<<endl;
+ 
+cout<<"college id : "<<cid<<endl; cout<<"college name : "<<name<<endl;
+cout<<"college established year : "<<year<<endl; cout<<"college university : "<<un<<endl;
+}
+
+}
+void accept(int k)
+{
+if(k==year) //checking university published year matches or not
+{
+cout<<"your given year details are: "<<endl; cout<<"college id : "<<cid<<endl; cout<<"college name : "<<name<<endl;
+cout<<"college established year : "<<year<<endl; cout<<"college university : "<<un<<endl;
+}
+
+
+}
+
+};
+int main()
+{
+char p[10]; //p=university name
+int k,i,d,ch; // k=year , d=college details , ch=choice college c[20]; //creating array of object
+do
+{
+cout<<"\n1.Accet college details\n2.Display College Details of specified university\n3.Display College Details of established year\n4.Exit\nEnter your choice: ";
+cin>>ch; switch(ch)
+{
+ 
+case 1:cout<<"Enter how many college details you want to enter:- "; cin>>d;
+for(i=0;i<d;i++) c[i].accept();
+break;
+case 2:cout<<"\n\nEnter which university details you want: "; cin>>p;
+for(i=0;i<d;i++) c[i].accept(p); break;
+case 3:cout<<"\n\nEnter which year details you want: "; cin>>k;
+for(i=0;i<d;i++) c[i].accept(k);break;
+}
+}while(ch!=4); return(0);
+}
