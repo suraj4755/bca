@@ -1,0 +1,90 @@
+#include<iostream> #include<string.h> #include<stdio.h>
+
+using namespace std; int i,n;
+class Metro
+{
+
+
+int mno,No_of_Seats;
+
+
+char mname[20],Starting_point[20],Destination[20]; public:
+
+void accept()
+
+
+{
+
+
+cout<"Enter Metro Details:"; cout<<"Metro No.="; cin>>mno;
+cout<<"Metro Name="; cin>>mname; cout<<"No_of_Seats="; cin>>No_of_Seats; cout<<"Starting point=";
+ 
+cin>>Starting_point; cout<<"Destination="; cin>>Destination; cout<<"\n";
+}
+void display()
+{
+cout<<"Metro No.="; cout<<mno; cout<<"\nMetro Name="; cout<<mname; cout<<"\nNo_of_Seats="; cout<<No_of_Seats; cout<<"\nStarting point="; cout<<Starting_point; cout<<"\nDestination="; cout<<Destination; cout<<"\n";
+}
+void metrosearch(Metro m[],int n)
+{
+char a[20],b[20];
+cout<<"Enter Starting Point:"; cin>>a;
+cout<<"Enter Destination:"; cin>>b;
+for(i=0;i<=n;i++)
+{
+if(a==m[i].Starting_point && b==m[i].Destination)
+{
+ 
+m[i].display();
+
+}
+}
+}
+};
+
+
+int main()
+{
+Metro m[10];
+cout<<"Enter Of No. Of Details To Be Accept:"; cin>>n;
+
+
+
+cout<<"---MENU---\n 1.Accept \n 2.Display \n 3.Display details of metro from specified starting and ending destination by user \n 4.Exit:";
+cout<<"Enter Your Choice:"; int ch;
+cin>>ch;
+
+
+if(ch>=1 && ch<=4)
+{
+
+
+switch(ch)
+{
+
+
+case 1:
+
+
+for(i=1;i<=n;i++)
+{
+m[i].accept();
+}
+ 
+case 2: for(i=1;i<=n;i++)
+{
+
+m[i].display();
+
+}
+case 3:
+m[i].metrosearch(m,n); case 4:
+break;
+}
+}
+else
+{
+cout<<"Invalid Choice!!";
+}
+
+}
