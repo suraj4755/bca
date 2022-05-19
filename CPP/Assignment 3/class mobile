@@ -1,0 +1,28 @@
+#include<iostream> class mobile
+{
+int mid;
+char mnm[20]; float price; public:
+mobile(int,char *,float); mobile (){
+};
+void putmobile();
+};
+mobile::mobile(int id,char *nm,float prc)
+{
+mid=id; strcpy(mnm,nm); price=prc;
+}
+void mobile::putmobile()
+{
+cout<<"\n mobile id : "< cout<<"\n mobile name : "< cout<<"\n mobile price : "< } void main()
+{
+int id;
+char nm[20]; float prc; clrscr();
+cout<<"\n Enter mobile id : "; cin>>id;
+ 
+cout<<"\n Enter mobile name : "; cin>>nm;
+cout<<"\n Enter mobile price : "; cin>>prc;
+mobile m1(id,nm,prc); mobile m2;
+m2=m1;
+cout<<"\n Parameterized constructor "; cout<<"\n	"; m1.putmobile();
+cout<<"\n copy constructur "; cout<<"\n	"; m2.putmobile();
+getch()
+}
