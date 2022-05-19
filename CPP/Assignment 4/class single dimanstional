@@ -1,0 +1,36 @@
+#include<iostream.h> #include<conio.h> class sample
+{ int *p,n,i;< public:
+sample(); void get(); void show();
+~sample()
+{
+delete(p);
+}
+};
+sample::sample()
+{
+cout<<"\n Enter size of array : "; cin>>n;
+p=new int (n); cout<<"\n Enter "< } void sample::get()
+{
+ 
+for(i=0;i { cin>>p[i];
+}
+}
+void sample::show()
+{
+cout<<"\n Even = "; for(i=0;i {
+
+if(p[i]%2==0)
+{
+cout<<" "< }
+}
+cout<<"\n Odd = "; for(i=0;i {
+if(p[i] % 2 !=0)
+{
+cout<<" "< }
+}
+}
+void main()
+{
+clrscr(); sample s; s.show();
+getch();
+}
