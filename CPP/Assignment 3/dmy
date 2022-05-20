@@ -4,14 +4,14 @@ int dd,mm,yyyy;
 
 
 public:
-date(int d,int m,int y) // creating parameterized constructor
+date(int d,int m,int y) 
 {
 dd=d; mm=m; yyyy=y;
 }
 void disp()
 {
 if(mm>12)
-cout<<"Invalid Month."; //mm is month if it is greater than 12 then it is
+cout<<"Invalid Month."; 
 invalid.
  
 else
@@ -78,7 +78,7 @@ cout<<"Enter a month: "; cin>>m;
 cout<<"Enter a year : ";
  
 cin>>y;
-date d1(d,m,y); //creating instance of class date d1.disp();
+date d1(d,m,y); 
 
 return(0);
 }
