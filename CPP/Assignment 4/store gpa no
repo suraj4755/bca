@@ -19,7 +19,7 @@ cin >> num;
 float* ptr;
 
 
-// memory allocation of num number of floats
+
 
 
 ptr = new float[num];
