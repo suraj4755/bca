@@ -1,30 +1,36 @@
-#include<iostream> using namespace std; class dist
+#include<iostream>
+using namespace std;
+class dist 
 {
 public:
-int feet,inch,x,y,z; void input()
+int fe;
+int in;
+int ans;
+public:
+void getdist()
 {
-cout<<“enter feet and inches:”<<“\n”;
-cin>>feet>>inch;
+ cout<<"enter the feet ";
+ cin>>fe;
+ cout<<"enter the inches ";
+ cin>>in;
 }
-void show()
+void displaydist()
 {
-cout<<“The distance is “;
-cout<<feet<<” feet “<<inch<<” inch\n”;
- 
+ cout<<"inches=";
+ cout<<in;
+ cout<<"feet=";
+ cout<<fe;
 }
-void sum(dist x,dist y)
+void add()
 {
-feet=x.feet+y.feet; inch=x.inch+y.inch; if(inch>=12)
-{
-feet=feet+1; inch=inch-12;
+ ans=fe+(in/12);
+ cout<<ans;
 }
-}
-
 };
-int main()
+ int main()
 {
-dist x,y,z; x.input();
-y.input();
-z.sum(x,y);
-z.show();
+ class dist d;
+ d.getdist();
+ d.displaydist();
+ d.add();
 }
